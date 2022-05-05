@@ -16,19 +16,23 @@ export function win(playerName) {
   console.log(`Congratulations, ${playerName}!`);
 }
 
-export function lose(playerName) {
+// eslint-disable-next-line no-unused-vars
+export function defaultLose(playerName, playerAnswer, rightAnswer) {
   console.log(`Let's try again, ${playerName}!`);
 }
 
-export function playGame(rounds, game) {
+// eslint-disable-next-line no-unused-vars
+export function playGame(rounds, game, lose = defaultLose) {
   const playerName = hello();
 
   for (let i = 0; i < rounds; i += 1) {
-    if (game()) {
-      console.log('Correct!');
-    } else {
-      return lose(playerName);
+    const [playerAnswer, rightAnswer] = game();
+
+    if (playerAnswer !== rightAnswer) {
+      lose(playerName, playerAnswer, rightAnswer);
+      return;
     }
+    console.log('Correct!');
   }
-  return win(playerName);
+  win(playerName);
 }

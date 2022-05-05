@@ -14,7 +14,7 @@ function playEvenOnce() {
   console.log(`Question: ${numberToCheck}`);
   const playerAnswer = readLineSync.question('Your answer: ');
 
-  return playerAnswer === rightAnswer;
+  return [playerAnswer, rightAnswer];
 }
 
 export default function checkEven() {

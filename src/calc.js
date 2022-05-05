@@ -48,12 +48,13 @@ function playCalcOnce() {
   console.log(`Question: ${questionExpression}`);
   const playerAnswer = readLineSync.question('Your answer: ');
 
-  if (playerAnswer === rightAnswer) {
-    return true;
-  }
-  return console.log(`${playerAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}.`);
+  return [playerAnswer, rightAnswer];
+}
+
+function calcLose(playerName, playerAnswer, rightAnswer) {
+  console.log(`${playerAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}`);
 }
 
 export default function checkSum() {
-  playGame(3, playCalcOnce);
+  playGame(3, playCalcOnce, calcLose);
 }
