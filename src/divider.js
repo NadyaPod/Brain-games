@@ -14,7 +14,7 @@ function calculateBiggestDivisor(firstNumber, secondNumber) {
 }
 
 function calcLose(playerName, playerAnswer, rightAnswer) {
-  console.log(`${playerAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}.`);
+  console.log(`${playerAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}`);
 }
 
 function playDivisorOnce() {

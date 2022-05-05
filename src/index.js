@@ -7,6 +7,10 @@ export function hello() {
   return playerName;
 }
 
+export function getRandomInRange(min, max) {
+  return Math.floor(Math.random() * (max - min) + min);
+}
+
 export function getRandomFromHunded() {
   const number = Math.floor(Math.random() * 100);
   return number;

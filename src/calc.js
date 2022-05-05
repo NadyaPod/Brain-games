@@ -1,9 +1,5 @@
 import readLineSync from 'readline-sync';
-import { playGame, getRandomFromHunded } from './index.js';
-
-function getRandomInRange(min, max) {
-  return Math.floor(Math.random() * (max - min) + min);
-}
+import { playGame, getRandomFromHunded, getRandomInRange } from './index.js';
 
 function getRandomOperation() {
   const number = getRandomInRange(1, 4);
