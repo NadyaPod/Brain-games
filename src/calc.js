@@ -1,12 +1,12 @@
 import readLineSync from 'readline-sync';
-import { playGame, getRandomFromHunded } from './cli.js';
+import { playGame, getRandomFromHunded } from './index.js';
 
-function getRandomInt(min, max) {
+function getRandomInRange(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
 
 function getRandomOperation() {
-  const number = getRandomInt(1, 4);
+  const number = getRandomInRange(1, 4);
   let result = '';
 
   switch (number) {
