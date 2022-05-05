@@ -1,10 +1,5 @@
 import readLineSync from 'readline-sync';
-import playGame from './cli.js';
-
-function getRandomFromHunded() {
-  const number = Math.floor(Math.random(0, 100) * 100);
-  return number;
-}
+import { playGame, getRandomFromHunded } from './cli.js';
 
 function isEven(number) {
   const result = number % 2 === 0 ? 'yes' : 'no';

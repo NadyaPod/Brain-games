@@ -7,6 +7,11 @@ export function hello() {
   return playerName;
 }
 
+export function getRandomFromHunded() {
+  const number = Math.floor(Math.random() * 100);
+  return number;
+}
+
 export function win(playerName) {
   console.log(`Congratulations, ${playerName}!`);
 }
@@ -15,7 +20,7 @@ export function lose(playerName) {
   console.log(`Let's try again, ${playerName}!`);
 }
 
-export default function playGame(rounds, game) {
+export function playGame(rounds, game) {
   const playerName = hello();
 
   for (let i = 0; i < rounds; i += 1) {
