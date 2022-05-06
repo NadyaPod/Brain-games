@@ -22,7 +22,7 @@ function playProgressionOnce() {
   const [progression, rightAnswer] = generateMissingProgression();
 
   console.log('What number is missing in the progression?');
-  console.log(`Question: ${progression}`);
+  console.log(`Question: ${progression.join(' ')}`);
   const playerAnswer = readLineSync.question('Your answer: ');
 
   return [playerAnswer, String(rightAnswer)];
