@@ -49,6 +49,7 @@ function playCalcOnce() {
 
 function calcLose(playerName, playerAnswer, rightAnswer) {
   console.log(`${playerAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}`);
+  console.log(`Let's try again, ${playerName}!`);
 }
 
 export default function checkSum() {
