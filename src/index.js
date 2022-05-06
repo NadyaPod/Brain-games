@@ -1,11 +1,4 @@
-import readLineSync from 'readline-sync';
-
-export function hello() {
-  console.log('Welcome to the Brain Games!');
-  const playerName = readLineSync.question('May I have your name? ');
-  console.log(`Hello, ${playerName}!`);
-  return playerName;
-}
+import hello from './cli.js';
 
 export function getRandomInRange(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
