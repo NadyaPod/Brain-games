@@ -22,11 +22,12 @@ export function win(playerName) {
 
 // eslint-disable-next-line no-unused-vars
 export function defaultLose(playerName, playerAnswer, rightAnswer) {
+  console.log(`${playerAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}`);
   console.log(`Let's try again, ${playerName}!`);
 }
 
 // eslint-disable-next-line no-unused-vars
-export function playGame(rounds, game, lose = defaultLose) {
+export function playGame(rounds, game, lose) {
   const playerName = hello();
 
   for (let i = 0; i < rounds; i += 1) {

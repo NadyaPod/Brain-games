@@ -1,5 +1,5 @@
 import readLineSync from 'readline-sync';
-import { playGame, getRandomFromHunded } from './index.js';
+import { playGame, getRandomFromHunded, defaultLose } from './index.js';
 
 function isPrime(number) {
   /* eslint max-len: ["error", { "code": 130 }] */
@@ -19,11 +19,6 @@ function playPrimeOnce() {
   return [playerAnswer, String(rightAnswer)];
 }
 
-function calcLose(playerName, playerAnswer, rightAnswer) {
-  console.log(`${playerAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}`);
-  console.log(`Let's try again, ${playerName}!`);
-}
-
 export default function checkPrime() {
-  playGame(3, playPrimeOnce, calcLose);
+  playGame(3, playPrimeOnce, defaultLose);
 }

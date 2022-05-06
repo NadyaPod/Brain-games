@@ -6,6 +6,10 @@ function isEven(number) {
   return result;
 }
 
+function customLose(playerName) {
+  console.log(`Let's try again, ${playerName}!`);
+}
+
 function playEvenOnce() {
   const numberToCheck = getRandomFromHunded();
   const rightAnswer = isEven(numberToCheck);
@@ -18,5 +22,5 @@ function playEvenOnce() {
 }
 
 export default function checkEven() {
-  playGame(3, playEvenOnce);
+  playGame(3, playEvenOnce, customLose);
 }

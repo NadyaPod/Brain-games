@@ -1,5 +1,7 @@
 import readLineSync from 'readline-sync';
-import { playGame, getRandomFromHunded, getRandomInRange } from './index.js';
+import {
+  playGame, defaultLose, getRandomFromHunded, getRandomInRange,
+} from './index.js';
 
 function getRandomOperation() {
   const number = getRandomInRange(1, 4);
@@ -47,11 +49,6 @@ function playCalcOnce() {
   return [playerAnswer, rightAnswer];
 }
 
-function calcLose(playerName, playerAnswer, rightAnswer) {
-  console.log(`${playerAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}`);
-  console.log(`Let's try again, ${playerName}!`);
-}
-
 export default function checkSum() {
-  playGame(3, playCalcOnce, calcLose);
+  playGame(3, playCalcOnce, defaultLose);
 }

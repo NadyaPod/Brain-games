@@ -1,5 +1,7 @@
 import readLineSync from 'readline-sync';
-import { playGame, getRandomFromHunded, getRandomInRange } from './index.js';
+import {
+  playGame, getRandomFromHunded, getRandomInRange, defaultLose,
+} from './index.js';
 
 function generateMissingProgression() {
   const arr = [];
@@ -28,11 +30,6 @@ function playProgressionOnce() {
   return [playerAnswer, String(rightAnswer)];
 }
 
-function calcLose(playerName, playerAnswer, rightAnswer) {
-  console.log(`${playerAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}`);
-  console.log(`Let's try again, ${playerName}!`);
-}
-
 export default function checkProgression() {
-  playGame(3, playProgressionOnce, calcLose);
+  playGame(3, playProgressionOnce, defaultLose);
 }

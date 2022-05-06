@@ -1,5 +1,5 @@
 import readLineSync from 'readline-sync';
-import { playGame, getRandomFromHunded } from './index.js';
+import { playGame, getRandomFromHunded, defaultLose } from './index.js';
 
 function calculateBiggestDivisor(firstNumber, secondNumber) {
   let a = Math.abs(firstNumber);
@@ -11,11 +11,6 @@ function calculateBiggestDivisor(firstNumber, secondNumber) {
     a = temp;
   }
   return a;
-}
-
-function calcLose(playerName, playerAnswer, rightAnswer) {
-  console.log(`${playerAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}`);
-  console.log(`Let's try again, ${playerName}!`);
 }
 
 function playDivisorOnce() {
@@ -31,5 +26,5 @@ function playDivisorOnce() {
 }
 
 export default function findDivider() {
-  playGame(3, playDivisorOnce, calcLose);
+  playGame(3, playDivisorOnce, defaultLose);
 }
